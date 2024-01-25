@@ -222,7 +222,7 @@ export default {
                 if (this.ratingAdded === true) {
                     this.recipe.averageRating = await this.loadAverageRating(this.recipe.id);
                     console.log('Ocena została dodana.');
-                    this.$router.go();
+                    this.$router.push( {name: 'RecipePage', params: { Id: this.recipe.id }});
                 }
                 else {
                     console.log('Nie udało się dodać oceny.');
