@@ -22,10 +22,10 @@ const routes = [
     { path: '/logIn', component: LogInPage },
     { path: '/addRecipe', component: AddRecipe },
     { path: '/myRecipes', component: MyRecipes },
-    { name: "RecipePage", path: '/recipes/id=:Id', component: Recipe, props: route => ({ Id: Number(route.params.Id) }) },
+    { name: "RecipePage", path: '/recipes/id/:Id', component: Recipe, props: route => ({ Id: Number(route.params.Id) }) },
     { name: "RecipeListPage", path: '/:RecipeType', component: RecipeListPage, props: true },
     { path: '/recipes/:page', name: 'Recipes', component: RecipeListPage },
-    { name: "EditRecipePage", path: '/editRecipe/id=:Id', component: EditRecipe, props: route => ({ Id: Number(route.params.Id) })}
+    { name: "EditRecipePage", path: '/editRecipe/id/:Id', component: EditRecipe, props: route => ({ Id: Number(route.params.Id) })}
 ];
 
 const router = createRouter({
