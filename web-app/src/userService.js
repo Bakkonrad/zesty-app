@@ -21,7 +21,7 @@ const login = async (username, password) => {
             setUser();
             alert('Zalogowano!');
             return true;
-        }
+        } 
         else
             return false;
     } catch (error) {
