@@ -8,6 +8,13 @@ module.exports = {
         args[0]['__VUE_PROD_HYDRATION_MISMATCH_DETAILS__'] = true;
         return args;
       });
-  }
+  },
+  publicPath : '/'
 }
+
+
+
+// publicPath : process.env.NODE_ENV === 'production'
+//     ? '/RecipeBook/'
+//     : '/'
 
