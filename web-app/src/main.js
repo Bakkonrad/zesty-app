@@ -25,7 +25,8 @@ const routes = [
     { name: "RecipePage", path: '/recipes/id/:Id', component: Recipe, props: route => ({ Id: Number(route.params.Id) }) },
     { name: "RecipeListPage", path: '/:RecipeType', component: RecipeListPage, props: true },
     { path: '/recipes/:page', name: 'Recipes', component: RecipeListPage },
-    { name: "EditRecipePage", path: '/editRecipe/id/:Id', component: EditRecipe, props: route => ({ Id: Number(route.params.Id) })}
+    { name: "EditRecipePage", path: '/editRecipe/id/:Id', component: EditRecipe, props: route => ({ Id: Number(route.params.Id) })},
+    { path: '/:pathMatch(.*)*', redirect: '/' }
 ];
 
 const router = createRouter({
