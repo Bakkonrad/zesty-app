@@ -123,7 +123,7 @@ export default {
                     //     repeatPassword: ''
                     // };
                     this.registered = true;
-                    this.$router.go();
+                    this.$router.push({path: '/logIn'});
                 }
                 else
                 {
